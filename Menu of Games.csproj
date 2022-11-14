@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54B3C9CB-93BF-4BBF-BB30-43D48D710ED0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Menu_of_Games</RootNamespace>
+    <AssemblyName>Menu of Games</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Player.cs" />
+    <Compile Include="Uno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uno.Designer.cs">
+      <DependentUpon>Uno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start_Menu.Designer.cs">
+      <DependentUpon>Start_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Start_Menu.resx">
+      <DependentUpon>Start_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uno.resx">
+      <DependentUpon>Uno.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UnoCards\blue_8.png" />
+    <Content Include="UnoCards\blue_9.png" />
+    <Content Include="UnoCards\blue_picker.png" />
+    <Content Include="UnoCards\blue_reverse.png" />
+    <Content Include="UnoCards\blue_skip.png" />
+    <Content Include="UnoCards\card_back.png" />
+    <Content Include="UnoCards\green_0.png" />
+    <Content Include="UnoCards\green_1.png" />
+    <Content Include="UnoCards\green_2.png" />
+    <Content Include="UnoCards\green_3.png" />
+    <Content Include="UnoCards\green_4.png" />
+    <Content Include="UnoCards\green_5.png" />
+    <Content Include="UnoCards\green_6.png" />
+    <Content Include="UnoCards\green_7.png" />
+    <Content Include="UnoCards\green_8.png" />
+    <Content Include="UnoCards\green_9.png" />
+    <Content Include="UnoCards\green_picker.png" />
+    <Content Include="UnoCards\green_reverse.png" />
+    <Content Include="UnoCards\green_skip.png" />
+    <Content Include="UnoCards\red_0.png" />
+    <Content Include="UnoCards\red_1.png" />
+    <Content Include="UnoCards\red_2.png" />
+    <Content Include="UnoCards\red_3.png" />
+    <Content Include="UnoCards\red_4.png" />
+    <Content Include="UnoCards\red_5.png" />
+    <Content Include="UnoCards\red_6.png" />
+    <Content Include="UnoCards\red_7.png" />
+    <Content Include="UnoCards\red_8.png" />
+    <Content Include="UnoCards\red_9.png" />
+    <Content Include="UnoCards\red_picker.png" />
+    <Content Include="UnoCards\red_reverse.png" />
+    <Content Include="UnoCards\red_skip.png" />
+    <Content Include="UnoCards\wild_color_changer.png" />
+    <Content Include="UnoCards\wild_pick_four.png" />
+    <Content Include="UnoCards\yellow_0.png" />
+    <Content Include="UnoCards\yellow_1.png" />
+    <Content Include="UnoCards\yellow_2.png" />
+    <Content Include="UnoCards\yellow_3.png" />
+    <Content Include="UnoCards\yellow_4.png" />
+    <Content Include="UnoCards\yellow_5.png" />
+    <Content Include="UnoCards\yellow_6.png" />
+    <Content Include="UnoCards\yellow_7.png" />
+    <Content Include="UnoCards\yellow_8.png" />
+    <Content Include="UnoCards\yellow_9.png" />
+    <Content Include="UnoCards\yellow_picker.png" />
+    <Content Include="UnoCards\yellow_reverse.png" />
+    <Content Include="UnoCards\yellow_skip.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
